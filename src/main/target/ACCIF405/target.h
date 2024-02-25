@@ -19,7 +19,7 @@
 
 #define USE_TARGET_CONFIG
 
-#define TARGET_BOARD_IDENTIFIER         "ACCIF405"
+#define TARGET_BOARD_IDENTIFIER         "A405"
 
 #define USBD_PRODUCT_STRING             "ACCIF405"
 
@@ -111,11 +111,11 @@
 #define SPI2_MOSI_PIN                   PB15
 
 // ******* OSD SPI
-#define USE_SPI_DEVICE_3
-#define SPI3_NSS_PIN                    PA15
-#define SPI3_SCK_PIN                    PC10
-#define SPI3_MISO_PIN                   PC11
-#define SPI3_MOSI_PIN                   PB5
+//#define USE_SPI_DEVICE_3
+//#define SPI3_NSS_PIN                    PA15
+//#define SPI3_SCK_PIN                    PC10
+//#define SPI3_MISO_PIN                   PC11
+//#define SPI3_MOSI_PIN                   PB5
 
 // ******* ADC ********
 #define USE_ADC
@@ -130,17 +130,21 @@
 #define VBAT_SCALE_DEFAULT              1100
 
 // ******* OSD ********
-#define USE_MAX7456
-#define MAX7456_SPI_BUS                 BUS_SPI3
-#define MAX7456_CS_PIN                  PA15
+//#define USE_MAX7456
+//#define MAX7456_SPI_BUS                 BUS_SPI3
+//#define MAX7456_CS_PIN                  PA15
 
 //******* FLASH ********
+#define M25P16_SPI_BUS BUS_SPI2
+#define M25P16_CS_PIN PB12
+
+#define W25N01G_SPI_BUS BUS_SPI2
+#define W25N01G_CS_PIN PB12
+
+#define USE_BLACKBOX
 #define USE_FLASHFS
 #define USE_FLASH_M25P16
-//#define USE_FLASH_W25N01G
-#define M25P16_SPI_BUS                  BUS_SPI2
-#define M25P16_CS_PIN                   PB12
-
+#define USE_FLASH_W25N01G
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 
 // ******* FEATURES ********

@@ -49,9 +49,9 @@
 
 void targetConfiguration(void)
 {
-    serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART4)].functionMask = FUNCTION_RX_SERIAL;
-    serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART2)].functionMask = FUNCTION_ESCSERIAL;
-    pinioBoxConfigMutable()->permanentId[0] = BOX_PERMANENT_ID_USER1;
+   serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART4)].functionMask = FUNCTION_RX_SERIAL;
+   serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART2)].functionMask = FUNCTION_ESCSERIAL;
+   pinioBoxConfigMutable()->permanentId[0] = BOX_PERMANENT_ID_USER1;
 
     serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART1)].functionMask = FUNCTION_MSP;
     serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART1)].msp_baudrateIndex = BAUD_115200;
